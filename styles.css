@@ -228,23 +228,26 @@ td {
 }
 
 .publication-image-wrapper img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .publication-image-wrapper:hover img {
-    z-index: 1000;
-    position: fixed;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    border-radius: 8px;
-    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: auto;
     height: auto;
     max-width: 500px;
     max-height: 500px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    object-fit: contain;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    transform-origin: top left;
 }
 
 /* ============================================
